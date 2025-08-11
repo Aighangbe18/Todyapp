@@ -1,0 +1,37 @@
+// app/(onboarding)/_layout.tsx
+import { Tabs } from "expo-router";
+
+const OnboardingLayout = () => { // Corrected syntax
+  return (
+    <Tabs screenOptions={{
+      headerShown: false,
+      tabBarStyle: {
+        display: 'none', // This hides the bottom tab bar
+      },
+      tabBarIndicatorStyle: {
+        display: 'none', // This hides the active tab indicator
+      }
+    }}>
+      <Tabs.Screen
+        name="splash"
+        options={{
+          title: "SplashScreen",
+        }}
+      />
+      <Tabs.Screen
+        name="onboarding1"
+        options={{
+          title: "Onboarding1Screen",
+        }}
+      />
+      <Tabs.Screen
+        name="onboarding2"
+        options={{
+          title: "Onboarding2Screen",
+        }}
+      />
+    </Tabs>
+  );
+};
+
+export default OnboardingLayout;

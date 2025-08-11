@@ -41,7 +41,7 @@ const CreateTaskScreen = () => {
         time: formattedTime,
         media: media,
       });
-      router.back();
+      router.push("../(Main)/TasksScreen");
     }
   };
 
